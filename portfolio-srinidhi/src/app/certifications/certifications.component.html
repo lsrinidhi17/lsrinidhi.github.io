@@ -1,18 +1,39 @@
 
-<mat-card class="example-card">
-  <mat-card-title>Certifications from various organisations</mat-card-title>
-  <mat-tab-group >
-    <mat-tab label="Cloud"> 
-      <mat-card class="cloudcard">
-        <mat-card-header>
-          <mat-card-title>Card 1 certification name</mat-card-title>
-        </mat-card-header>
-      <img mat-card-image class="datacamp" src="./../../assets/datacamp.png" alt="Datacamp logo" >
-       </mat-card>
+<mat-card class="example-card mat-elevation-z5">
+  <mat-card-title class="cardtitle">Online Certifications</mat-card-title>
+  <mat-tab-group>
+
+    <!--...........................Python Certifications.................................. -->
+    <mat-tab label="Python"> 
+      <mat-grid-list class="tile-orientation" cols="3" rowHeight="1:0.8" >
+        <mat-grid-tile  *ngFor="let card of pythoncardList">
+         <mat-card class="cloudcard mat-elevation-z5">
+          <mat-card-header>
+              <mat-card-title class ="matcardTitle">{{card.cardTitle}}</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <a href="{{card.link}}">
+            <img #tooltip="matTooltip"
+            matTooltip="Click to view the certificate"
+            matTooltipClass="example-tooltip-red"
+            matTooltipHideDelay="10"
+            mat-card-image class="image" src="{{card.urlVariable}}" alt="{{card.altlogo}}" >
+            </a>
+          </mat-card-content>
+         </mat-card>
+        </mat-grid-tile>
+      </mat-grid-list>
     </mat-tab>
-    
-    <mat-tab label="Python">Python</mat-tab>
+
+  <!--...........................Cloud Certifications.................................. -->
+    <mat-tab label="Cloud">Cloud certification in Progress</mat-tab>
+
+  <!--...........................Cloud Certifications.................................. -->
+
     <mat-tab label="R"> R </mat-tab>
+
+  <!--...........................Cloud Certifications.................................. -->
+
     <mat-tab label="SQL"> SQL </mat-tab>
     <!-- <mat-tab label="Deep Learning"> SQL </mat-tab>
     <mat-tab label="Natural Language Processing"> SQL </mat-tab> -->
