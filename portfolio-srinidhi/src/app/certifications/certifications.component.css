@@ -1,0 +1,26 @@
+.example-card {
+    margin-top: 20px;
+    margin-left: 200px;
+    max-width: 1000px;
+    height: 620px;
+    align-content: center;
+    font-size: 9px;
+
+  }
+  .example-header-image {
+    background-size: cover;
+  }
+
+  .datacamp{
+    height:200px;
+    width:150px;
+    margin-left: 60px;
+    border: 1px solid #000
+
+}
+  .cloudcard{
+    margin-top: 20px;
+    max-width: 300px;
+    height: 300px;
+    border:1px dotted black
+  }
